@@ -1,1 +1,2 @@
 github "ParsePlatform/Parse-SDK-iOS-OSX"
+github "AFNetworking/AFNetworking" ~> "3.0"

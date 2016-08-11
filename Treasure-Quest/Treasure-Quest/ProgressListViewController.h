@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Quest.h"
+#import "Objective.h"
 
 @interface ProgressListViewController : UIViewController
+
+@property (strong, nonatomic) Quest *currentQuest;
+@property (strong, nonatomic) Objective *currentObjective;
+@property (strong, nonatomic) NSMutableArray *objectivesDisplayed;
+-(void)userDidCompleteCurrentObjective;
 
 @end

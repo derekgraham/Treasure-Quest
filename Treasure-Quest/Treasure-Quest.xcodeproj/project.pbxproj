@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04594DF91D599695007AAAB6 /* EnterCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04594DF81D599695007AAAB6 /* EnterCodeViewController.m */; };
+		04594DFD1D5A8C04007AAAB6 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04594DFC1D5A8C04007AAAB6 /* CountDownViewController.m */; };
 		048DB9461D53F65900604726 /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DB9451D53F65900604726 /* SetupViewController.m */; };
 		048DB9491D54015C00604726 /* PlayfieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DB9481D54015C00604726 /* PlayfieldViewController.m */; };
 		048DB94C1D5403FE00604726 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DB94B1D5403FE00604726 /* SummaryViewController.m */; };
+		048DB94F1D553B0700604726 /* Waiting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DB94E1D553B0700604726 /* Waiting.storyboard */; };
+		048DB9521D5544EE00604726 /* WaitPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048DB9511D5544EE00604726 /* WaitPageViewController.m */; };
 		4C7D75F21D53389C00932D3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D75F11D53389C00932D3A /* main.m */; };
 		4C7D75F51D53389C00932D3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D75F41D53389C00932D3A /* AppDelegate.m */; };
 		4C7D75F81D53389C00932D3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D75F71D53389C00932D3A /* ViewController.m */; };
@@ -29,6 +33,17 @@
 		4C7D76221D54033900932D3A /* Playfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D76211D54033900932D3A /* Playfield.m */; };
 		4C7D76251D54044F00932D3A /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D76241D54044F00932D3A /* Route.m */; };
 		4C7D76351D5546F700932D3A /* Objective.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D76341D5546F700932D3A /* Objective.m */; };
+		4C7D76381D55A7D800932D3A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D76371D55A7D800932D3A /* MapViewController.m */; };
+		4C7D763B1D55A7E700932D3A /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7D763A1D55A7E700932D3A /* LeaderBoardViewController.m */; };
+		4CBE87A81D55B8DE0034F19A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBE87A71D55B8DE0034F19A /* MapKit.framework */; };
+		4CBE87AB1D55BC8F0034F19A /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE87AA1D55BC8F0034F19A /* LocationController.m */; };
+		6958E99D1D5B193000510ADC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6958E99C1D5B193000510ADC /* MessageUI.framework */; };
+		699942FF1D5BC78A00735F9F /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 699942FE1D5BC78A00735F9F /* TabBarViewController.m */; };
+		699943011D5BF76600735F9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699943001D5BF76600735F9F /* AudioToolbox.framework */; };
+		8BF2B1D41D567CBD0071DE20 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2B1D31D567CBD0071DE20 /* JSONParser.m */; };
+		8BF2B1D71D567DC10071DE20 /* FoursquareAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2B1D61D567DC10071DE20 /* FoursquareAPI.m */; };
+		8BF2B1D91D56A0F70071DE20 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF2B1D81D56A0F70071DE20 /* AFNetworking.framework */; };
+		8BF2B1DA1D56A16E0071DE20 /* AFNetworking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BF2B1D81D56A0F70071DE20 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8BF2B1DA1D56A16E0071DE20 /* AFNetworking.framework in CopyFiles */,
 				4C7D76121D534D5600932D3A /* ParseUI.framework in CopyFiles */,
 				4C7D760E1D533D5200932D3A /* Bolts.framework in CopyFiles */,
 				4C7D760F1D533D5200932D3A /* Parse.framework in CopyFiles */,
@@ -47,12 +63,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04594DF71D599695007AAAB6 /* EnterCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterCodeViewController.h; sourceTree = "<group>"; };
+		04594DF81D599695007AAAB6 /* EnterCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterCodeViewController.m; sourceTree = "<group>"; };
+		04594DFB1D5A8C04007AAAB6 /* CountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
+		04594DFC1D5A8C04007AAAB6 /* CountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
 		048DB9441D53F65900604726 /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
 		048DB9451D53F65900604726 /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		048DB9471D54015C00604726 /* PlayfieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayfieldViewController.h; sourceTree = "<group>"; };
 		048DB9481D54015C00604726 /* PlayfieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayfieldViewController.m; sourceTree = "<group>"; };
 		048DB94A1D5403FE00604726 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
 		048DB94B1D5403FE00604726 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
+		048DB94E1D553B0700604726 /* Waiting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Waiting.storyboard; sourceTree = "<group>"; };
+		048DB9501D5544EE00604726 /* WaitPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitPageViewController.h; sourceTree = "<group>"; };
+		048DB9511D5544EE00604726 /* WaitPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitPageViewController.m; sourceTree = "<group>"; };
 		4C7D75ED1D53389C00932D3A /* Treasure-Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Treasure-Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7D75F11D53389C00932D3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C7D75F31D53389C00932D3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,6 +102,22 @@
 		4C7D76241D54044F00932D3A /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		4C7D76331D5546F700932D3A /* Objective.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objective.h; sourceTree = "<group>"; };
 		4C7D76341D5546F700932D3A /* Objective.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Objective.m; sourceTree = "<group>"; };
+		4C7D76361D55A7D800932D3A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4C7D76371D55A7D800932D3A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4C7D76391D55A7E700932D3A /* LeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewController.h; sourceTree = "<group>"; };
+		4C7D763A1D55A7E700932D3A /* LeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
+		4CBE87A71D55B8DE0034F19A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4CBE87A91D55BC8F0034F19A /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		4CBE87AA1D55BC8F0034F19A /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		6958E99C1D5B193000510ADC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		699942FD1D5BC78A00735F9F /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		699942FE1D5BC78A00735F9F /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		699943001D5BF76600735F9F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8BF2B1D21D567CBD0071DE20 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		8BF2B1D31D567CBD0071DE20 /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
+		8BF2B1D51D567DC10071DE20 /* FoursquareAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareAPI.h; sourceTree = "<group>"; };
+		8BF2B1D61D567DC10071DE20 /* FoursquareAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareAPI.m; sourceTree = "<group>"; };
+		8BF2B1D81D56A0F70071DE20 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +125,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699943011D5BF76600735F9F /* AudioToolbox.framework in Frameworks */,
+				6958E99D1D5B193000510ADC /* MessageUI.framework in Frameworks */,
 				4C7D76111D534C6D00932D3A /* ParseUI.framework in Frameworks */,
+				8BF2B1D91D56A0F70071DE20 /* AFNetworking.framework in Frameworks */,
 				4C7D76091D533CDE00932D3A /* Bolts.framework in Frameworks */,
+				4CBE87A81D55B8DE0034F19A /* MapKit.framework in Frameworks */,
 				4C7D760A1D533CDE00932D3A /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,9 +138,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04594DFA1D5996A2007AAAB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04594DFB1D5A8C04007AAAB6 /* CountDownViewController.h */,
+				04594DFC1D5A8C04007AAAB6 /* CountDownViewController.m */,
+				04594DF71D599695007AAAB6 /* EnterCodeViewController.h */,
+				04594DF81D599695007AAAB6 /* EnterCodeViewController.m */,
+				048DB9501D5544EE00604726 /* WaitPageViewController.h */,
+				048DB9511D5544EE00604726 /* WaitPageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		048DB94D1D553AD600604726 /* Wait WorkFlow */ = {
+			isa = PBXGroup;
+			children = (
+				048DB94E1D553B0700604726 /* Waiting.storyboard */,
+				04594DFA1D5996A2007AAAB6 /* Controller */,
+			);
+			name = "Wait WorkFlow";
+			sourceTree = "<group>";
+		};
 		4C7D75E41D53389C00932D3A = {
 			isa = PBXGroup;
 			children = (
+				699943001D5BF76600735F9F /* AudioToolbox.framework */,
+				6958E99C1D5B193000510ADC /* MessageUI.framework */,
+				8BF2B1D81D56A0F70071DE20 /* AFNetworking.framework */,
+				4CBE87A71D55B8DE0034F19A /* MapKit.framework */,
 				4C7D76101D534C6D00932D3A /* ParseUI.framework */,
 				4C7D76071D533CDE00932D3A /* Bolts.framework */,
 				4C7D76081D533CDE00932D3A /* Parse.framework */,
@@ -119,7 +188,8 @@
 			children = (
 				4C7D762A1D5525F900932D3A /* Shared */,
 				4C7D76281D5525B700932D3A /* Create Workflow */,
-				4C7D76181D53FA1C00932D3A /* Join Workflow */,
+				4C7D76181D53FA1C00932D3A /* Play Workflow */,
+				048DB94D1D553AD600604726 /* Wait WorkFlow */,
 				4C7D75F01D53389C00932D3A /* Supporting Files */,
 			);
 			path = "Treasure-Quest";
@@ -129,25 +199,34 @@
 			isa = PBXGroup;
 			children = (
 				4C7D75F11D53389C00932D3A /* main.m */,
+				8BF2B1D21D567CBD0071DE20 /* JSONParser.h */,
+				8BF2B1D31D567CBD0071DE20 /* JSONParser.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4C7D76181D53FA1C00932D3A /* Join Workflow */ = {
+		4C7D76181D53FA1C00932D3A /* Play Workflow */ = {
 			isa = PBXGroup;
 			children = (
 				4C7D76321D55276A00932D3A /* Model */,
+				4C7D75F71D53389C00932D3A /* ViewController.m */,
 				4C7D76311D55276200932D3A /* View */,
 				4C7D76191D53FAA700932D3A /* Controller */,
 			);
-			name = "Join Workflow";
+			name = "Play Workflow";
 			sourceTree = "<group>";
 		};
 		4C7D76191D53FAA700932D3A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				699942FD1D5BC78A00735F9F /* TabBarViewController.h */,
+				699942FE1D5BC78A00735F9F /* TabBarViewController.m */,
 				4C7D76151D53FA1700932D3A /* ProgressListViewController.h */,
 				4C7D76161D53FA1700932D3A /* ProgressListViewController.m */,
+				4C7D76361D55A7D800932D3A /* MapViewController.h */,
+				4C7D76371D55A7D800932D3A /* MapViewController.m */,
+				4C7D76391D55A7E700932D3A /* LeaderBoardViewController.h */,
+				4C7D763A1D55A7E700932D3A /* LeaderBoardViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -182,12 +261,12 @@
 		4C7D76291D5525DB00932D3A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				048DB94A1D5403FE00604726 /* SummaryViewController.h */,
-				048DB94B1D5403FE00604726 /* SummaryViewController.m */,
 				048DB9441D53F65900604726 /* SetupViewController.h */,
 				048DB9451D53F65900604726 /* SetupViewController.m */,
 				048DB9471D54015C00604726 /* PlayfieldViewController.h */,
 				048DB9481D54015C00604726 /* PlayfieldViewController.m */,
+				048DB94A1D5403FE00604726 /* SummaryViewController.h */,
+				048DB94B1D5403FE00604726 /* SummaryViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -208,7 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				4C7D75F61D53389C00932D3A /* ViewController.h */,
-				4C7D75F71D53389C00932D3A /* ViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -224,6 +302,8 @@
 		4C7D762D1D55263200932D3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BF2B1D51D567DC10071DE20 /* FoursquareAPI.h */,
+				8BF2B1D61D567DC10071DE20 /* FoursquareAPI.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -265,6 +345,8 @@
 		4C7D76321D55276A00932D3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4CBE87A91D55BC8F0034F19A /* LocationController.h */,
+				4CBE87AA1D55BC8F0034F19A /* LocationController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -301,6 +383,15 @@
 				TargetAttributes = {
 					4C7D75EC1D53389C00932D3A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8ZT3NZA445;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -331,6 +422,7 @@
 				4C7D75FD1D53389D00932D3A /* Assets.xcassets in Resources */,
 				4C7D76141D53F5E400932D3A /* Join.storyboard in Resources */,
 				4C7D75FB1D53389D00932D3A /* Main.storyboard in Resources */,
+				048DB94F1D553B0700604726 /* Waiting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +436,23 @@
 				4C7D76221D54033900932D3A /* Playfield.m in Sources */,
 				4C7D76251D54044F00932D3A /* Route.m in Sources */,
 				048DB9461D53F65900604726 /* SetupViewController.m in Sources */,
+				8BF2B1D71D567DC10071DE20 /* FoursquareAPI.m in Sources */,
 				4C7D75F81D53389C00932D3A /* ViewController.m in Sources */,
+				048DB9521D5544EE00604726 /* WaitPageViewController.m in Sources */,
 				4C7D761C1D53FD8B00932D3A /* Quest.m in Sources */,
+				4CBE87AB1D55BC8F0034F19A /* LocationController.m in Sources */,
 				4C7D75F51D53389C00932D3A /* AppDelegate.m in Sources */,
+				4C7D763B1D55A7E700932D3A /* LeaderBoardViewController.m in Sources */,
 				4C7D75F21D53389C00932D3A /* main.m in Sources */,
+				4C7D76381D55A7D800932D3A /* MapViewController.m in Sources */,
+				04594DFD1D5A8C04007AAAB6 /* CountDownViewController.m in Sources */,
 				4C7D761F1D5400A900932D3A /* Player.m in Sources */,
 				4C7D76171D53FA1700932D3A /* ProgressListViewController.m in Sources */,
+				04594DF91D599695007AAAB6 /* EnterCodeViewController.m in Sources */,
+				699942FF1D5BC78A00735F9F /* TabBarViewController.m in Sources */,
 				4C7D76351D5546F700932D3A /* Objective.m in Sources */,
 				048DB9491D54015C00604726 /* PlayfieldViewController.m in Sources */,
+				8BF2B1D41D567CBD0071DE20 /* JSONParser.m in Sources */,
 				048DB94C1D5403FE00604726 /* SummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +567,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -473,8 +576,9 @@
 				);
 				INFOPLIST_FILE = "Treasure-Quest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sweeney.Treasure-Quest";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derekgraham.treasurequest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -482,6 +586,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -489,8 +595,9 @@
 				);
 				INFOPLIST_FILE = "Treasure-Quest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sweeney.Treasure-Quest";
+				PRODUCT_BUNDLE_IDENTIFIER = com.derekgraham.treasurequest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

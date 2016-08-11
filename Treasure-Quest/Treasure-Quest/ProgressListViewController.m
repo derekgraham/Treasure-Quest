@@ -10,13 +10,16 @@
 #import "Quest.h"
 #import "Player.h"
 #import "Route.h"
+#import "Objective.h"
 @import Parse;
+#import "MapViewController.h"
+#import "TabBarViewController.h"
 
 @interface ProgressListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) Quest *currentQuest;
+//@property (strong, nonatomic) Quest *currentQuest;
 
 @end
 
@@ -27,80 +30,85 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self setup];
-    NSLog(@"%lu", (unsigned long)self.currentQuest.route.waypoints.count);
-//    NSLog(@"NAME: %@", self.currentQuest.name);
-
+    
+    ((TabBarViewController *)self.parentViewController).currentQuest.name = @"new quest name";
+    NSLog(@"listview did load %@",((TabBarViewController *)self.parentViewController).currentQuest.name);
 }
 
-
 -(void) setup {
+
+   self.objectivesDisplayed = [[NSMutableArray alloc]init];
     
-    NSLog(@"Function called");
     PFQuery *query= [PFQuery queryWithClassName:@"Quest"];
-    __weak typeof (self) weakSelf = self;
+    [query whereKey:@"objectId" equalTo:[[PFUser currentUser] objectForKey:@"currentQuestId"]];
     
+    NSLog(@"current quest: %@", [[PFUser currentUser] objectForKey:@"currentQuestId"]);
+    __weak typeof (self) weakSelf = self;
+
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
         if (!error){
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 __strong typeof(weakSelf) strongSelf = weakSelf;
                 for (Quest *quest in objects)
                 {
-                    if ([quest.name isEqualToString:@"Rick's Pub Crawl"]) {
-                        NSLog(@"%@", quest.name);
-                    
-                        quest.route = [Route demoRoute];
-                       
-                        self.currentQuest = quest;
-                        NSLog(@"%lu", (unsigned long)quest.route.waypoints.count);
-                        NSLog(@"%@", quest.route);
-                        [self.tableView reloadData];
-                    }
-//                    //                        NSLog(@"Reminder: %@", reminder.name );
-//                    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake( reminder.location.latitude, reminder.location.longitude);
-//                    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate, 50.0, 50.0);
-//                    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-//                    point.coordinate = coordinate;
+                    NSLog(@"questname %@", quest.name);
 //                    
-//                    point.title = reminder.name ;
-//                    [strongSelf.mapView addAnnotation:point];
-//                    
-//                    
-//                    if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
-//                        CLCircularRegion *region = [[CLCircularRegion alloc]initWithCenter:coordinate radius:reminder.radius.floatValue identifier:reminder.name];
-//                        
-//                        [[[LocationController sharedController]locationManager] startMonitoringForRegion:region];
-//                        
-//                        MKCircle *circle = [MKCircle circleWithCenterCoordinate:coordinate radius:reminder.radius.floatValue];
-//                        
-//                        [strongSelf.mapView addOverlay:circle];
-//                        
-//                        
+                    NSNumber *playerNumber = [NSNumber numberWithInt:(int)([quest.players indexOfObject:[PFUser currentUser].objectId])];
+//
+//                    NSArray
+//                    switch (playerNumber) {
+//                        case 0:
+//                            quest.objectives0
+//                            break;
+//                            
+//                        default:
+//                            break;
 //                    }
                     
+                   for (Objective *objective in quest.objectives[playerNumber.intValue]){
+                       
+                       [objective fetchIfNeeded];
+                        NSLog(@"%@", objective.name);
+                       [strongSelf.objectivesDisplayed addObject:objective];
+                        NSLog(@"%lu", (unsigned long) quest.objectives.count);
+                        [strongSelf.tableView reloadData];
+                       
+                    }
+                    
+                    ((TabBarViewController *)self.parentViewController).currentQuest = quest;
+                    ((TabBarViewController *)self.parentViewController).currentQuest.objectives = strongSelf.objectivesDisplayed;
+                    ((TabBarViewController *)self.parentViewController).currentObjective = strongSelf.objectivesDisplayed[0];
+                    
                 }
-//                strongSelf.mapView.showsUserLocation = YES;
-//
-//                [strongSelf.mapView showAnnotations:strongSelf.mapView.annotations animated:YES];
-                
             }];
+        } else {
+            NSLog(@"ERROR: %@", error.localizedDescription);
         }
     }];
     
-    
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    cell.textLabel.text = @"test";
-    return cell;
    
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return self.currentQuest.route.waypoints.count;
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    Objective *objective = [[Objective alloc] init];
+    objective = self.objectivesDisplayed[indexPath.row];
+//    [objective fetchIfNeeded];
+//    NSLog(@"Objective name: %@", [objective objectForKey:@"name"]);
+    cell.textLabel.text = objective.name;
+    return cell;
+
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return self.objectivesDisplayed.count;
+    
+}
+
+
 
 
 @end
